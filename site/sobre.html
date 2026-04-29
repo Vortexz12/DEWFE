@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre - Minecraft Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo Minecraft" id="minecraft-logo">
+        <nav><ul><li><a href="sobre.html">Sobre</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    </header>
+
+    <main>
+        <h1>Sobre o Jogo</h1>
+        <p>Minecraft é um jogo sobre colocar blocos e sair em aventuras. É um mundo infinito onde a única ferramenta necessária é a sua imaginação.</p>
+        <h3>Por que jogar?</h3>
+        <ul class="items-list">
+            <li>Criatividade sem limites.</li>
+            <li>Aprenda lógica com Redstone.</li>
+            <li>Jogue com amigos em servidores mundiais.</li>
+            <li>Atualizações constantes com novos biomas.</li>
+        </ul>
+    </main>
+
+    <audio id="break-sound" src="https://myinstants.com"></audio>
+    <script>
+        const logo = document.getElementById('minecraft-logo');
+        const sound = document.getElementById('break-sound');
+        logo.addEventListener('click', (e) => { e.preventDefault(); sound.play(); setTimeout(() => { window.location.href = "index.html"; }, 400); });
+    </script>
+</body>
+</html>

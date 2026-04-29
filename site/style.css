@@ -1,0 +1,89 @@
+/* Cores e Estilos Tema Minecraft */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #1e1e1e; /* Cinza Escuro */
+    color: #f0f0f0;
+}
+
+header {
+    background-color: #388E3C; /* Verde Grama */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #2E7D32;
+}
+
+.logo img {
+    height: 70px; /* Tamanho do logo */
+    border-radius: 8px;
+    border: 2px solid #fff;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.logo img:active {
+    transform: scale(0.9); /* Efeito de clique */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #A3D9A5;
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #2c2c2c; /* Cinza Pedra */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+h1 { color: #8BC34A; border-bottom: 2px solid #388E3C; padding-bottom: 10px; }
+h3 { color: #A3D9A5; }
+
+.items-list { line-height: 2; font-size: 1.1em; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.8em;
+}
+
+/* Estilo do Formulário */
+form input, form textarea {
+    padding: 12px;
+    background: #3d3d3d;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 12px;
+    background: #388E3C;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover { background: #45a049; }

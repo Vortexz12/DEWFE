@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviços - Minecraft Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo Minecraft" id="minecraft-logo">
+        <nav><ul><li><a href="sobre.html">Sobre</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    </header>
+
+    <main>
+        <h1>Nossos Serviços</h1>
+        <p>Confira o que podemos fazer pela sua experiência in-game:</p>
+        <ul class="items-list">
+            <li>🛠️ <strong>Hospedagem:</strong> Servidores que nunca caem.</li>
+            <li>🎨 <strong>Design:</strong> Criamos sua skin do zero.</li>
+            <li>📦 <strong>Mods:</strong> Instalação de pacotes técnicos e mágicos.</li>
+            <li>🏰 <strong>Builds:</strong> Construímos seu castelo medieval.</li>
+        </ul>
+    </main>
+
+    <audio id="break-sound" src="https://myinstants.com"></audio>
+    <script>
+        const logo = document.getElementById('minecraft-logo');
+        const sound = document.getElementById('break-sound');
+        logo.addEventListener('click', (e) => { e.preventDefault(); sound.play(); setTimeout(() => { window.location.href = "index.html"; }, 400); });
+    </script>
+</body>
+</html>

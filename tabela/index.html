@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades - Tabelas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        h3 {
+            margin-top: 30px;
+        }
+        .titulo-tabela {
+            font-weight: bold;
+            margin: 15px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Atividades</h1>
+    
+    <h3>1) Replique as tabelas</h3>
+
+    <!-- Tabela a) -->
+    <p class="titulo-tabela">a)</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Altura</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>20</td>
+                <td>1.65</td>
+            </tr>
+            <tr>
+                <td>Bruno</td>
+                <td>22</td>
+                <td>1.75</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabela b) -->
+    <p class="titulo-tabela">b)</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ana</th>
+                <th>Bruno</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Idade</td>
+                <td>20</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Altura</td>
+                <td>1.65</td>
+                <td>1.75</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabela c) -->
+    <p class="titulo-tabela">c)</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Aluno</th>
+                <th colspan="2">Disciplinas</th>
+                <th rowspan="2">Hobbies</th>
+            </tr>
+            <tr>
+                <th>Exatas</th>
+                <th>Humanas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td style="text-align: left;">
+                    • Matemática<br>
+                    • Física
+                </td>
+                <td style="text-align: left;">
+                    • História<br>
+                    • Geografia
+                </td>
+                <td style="text-align: left;">
+                    • Leitura<br>
+                    • Esportes
+                </td>
+            </tr>
+            <tr>
+                <td>Bruno</td>
+                <td style="text-align: left;">
+                    • Química<br>
+                    • Matemática
+                </td>
+                <td style="text-align: left;">
+                    • Sociologia<br>
+                    • Filosofia
+                </td>
+                <td style="text-align: left;">
+                    • Jogos<br>
+                    • Música
+                </td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td style="text-align: left;">
+                    • Física<br>
+                    • Química
+                </td>
+                <td style="text-align: left;">
+                    • História<br>
+                    • Artes
+                </td>
+                <td style="text-align: left;">
+                    • Pintura<br>
+                    • Viagem
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

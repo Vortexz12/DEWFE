@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Pro - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Logo Minecraft" id="minecraft-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao Universo Quadrado</h1>
+        <p>Este é o seu portal definitivo para explorar tudo o que o Minecraft tem a oferecer. Desde as profundezas das cavernas até o topo das montanhas de gelo.</p>
+        <p>Use o menu acima para navegar e descobrir mais sobre nossa história e serviços exclusivos para jogadores!</p>
+        <div style="text-align:center; margin-top:20px;">
+            <img src="./logo.jpg" alt="Logo Minecraft" id="minecraft-logo">
+        </div>
+    </main>
+
+    <footer>&copy; 2024 Portal Minecraft - Todos os direitos reservados.</footer>
+
+    <audio id="break-sound" src="https://myinstants.com"></audio>
+    <script>
+        const logo = document.getElementById('minecraft-logo');
+        const sound = document.getElementById('break-sound');
+        logo.addEventListener('click', (e) => {
+            e.preventDefault();
+            sound.play();
+            setTimeout(() => { window.location.href = "index.html"; }, 400);
+        });
+    </script>
+</body>
+</html>

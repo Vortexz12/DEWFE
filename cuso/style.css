@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a0033 100%);
+    color: #e0e0ff;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(100, 50, 255, 0.15) 0%, transparent 70%);
+    animation: pulse 15s infinite ease-in-out;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00f5ff, #a020f0, #00ffaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+}
+
+header p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Seções */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: rgba(20, 20, 50, 0.6);
+    border: 1px solid rgba(100, 100, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(100, 50, 255, 0.25);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: #00f5ff;
+    text-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #00f5ff, #a020f0);
+    border-radius: 3px;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 12px 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 35px;
+}
+
+ul li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: #00ffaa;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #00ffaa;
+}
+
+/* Informações importantes */
+section:last-of-type ul li strong {
+    color: #a020f0;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(100, 100, 255, 0.2);
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
+
+/* Efeitos neon e animações */
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    
+    section {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+}

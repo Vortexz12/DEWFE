@@ -1,0 +1,81 @@
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Estilização do Menu Principal */
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+nav ul li:hover {
+    transform: translateX(10px);
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilização das Listas */
+li {
+    margin-bottom: 5px;
+}
+
+dl {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+dt {
+    font-weight: bold;
+    color: #e67e22;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Link de Voltar */
+a[href="index.html"] {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a[href="index.html"]:hover {
+    background-color: #2980b9;
+}
