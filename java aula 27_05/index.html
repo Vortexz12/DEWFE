@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página inicial</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas<span id="contador">(0)</span></h1>
+        <div class="saudacao" id="mensagem_saudacao">Adicione Tarefas!</div>
+
+        <input type="text" id="nova_tarefa" placeholder="Digite sua tarefa aqui...">
+
+        <button onclick="adicionarTarefa()">Adicionar Tarefas</button>
+
+        <p id="mensagem"></p>
+        <ul id= "lista_tarefas"></ul>
+    </div>
+
+    <script src= "script.js"></script>
+</body>
+
+</html>
