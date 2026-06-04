@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Cadastro</h1>
+    <h3>Formulário de Cadastro</h3>
+
+    <form id="formCadastro">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <p>Este é um formulário de teste.</p>
+
+            <!-- Nome -->
+            <label>Nome completo:</label><br>
+            <input type="text" name="nome"><br><br>
+
+            <!-- Email -->
+            <label>E-mail:</label><br>
+            <input type="email" name="email" placeholder="exemplo@email.com"><br><br>
+
+            <!-- Data -->
+            <label>Data de nascimento:</label><br>
+            <input type="date" name="data"><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informações</legend>
+
+            <!-- Gênero -->
+            <label>Gênero:</label><br>
+            <input type="radio" name="genero" value="masculino"> Masculino
+            <input type="radio" name="genero" value="feminino"> Feminino
+            <input type="radio" name="genero" value="outro"> Outro
+            <br><br>
+
+            <!-- Interesses -->
+            <label>Interesses:</label><br>
+            <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
+            <input type="checkbox" name="interesses" value="esportes"> Esportes
+            <input type="checkbox" name="interesses" value="musica"> Música
+            <input type="checkbox" name="interesses" value="jogos"> Jogos
+            <br><br>
+
+            <!-- Estado -->
+            <label>Estado:</label><br>
+            <select name="estado">
+                <option value="">Selecione</option>
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="pr">Paraná</option>
+            </select>
+            <br><br>
+
+            <!-- Mensagem -->
+            <label>Mensagem:</label><br>
+            <textarea name="mensagem" rows="4" cols="40"></textarea>
+            <br><br>
+
+            <!-- Upload -->
+            <label>Upload de imagem:</label><br>
+            <input type="file" name="arquivo">
+            <br><br>
+
+            <!-- Botões -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            
+        </fieldset>
+
+    </form>
+
+        <h3>Resultado</h3>
+
+        <footer>
+            <p>© 2026 - Formulário Turma 1 ADS</p>
+        </footer>
+        <script>
+            document.getElementById("formCadastro").addEventListener("submit", function(event) {
+            event.preventDefault(); // impede o envio normal
+
+            // pegar valores
+            var nome = document.getElementsByName("nome")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var data = document.getElementsByName("data")[0].value;
+
+            // gênero
+            var genero = "";
+            var radios = document.getElementsByName("genero");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    genero = radios[i].value;
+                }
+            }
+
+            // interesses
+            var interessesLista = document.getElementsByName("interesses");
+            var interesses = "";
+            for (var i = 0; i < interessesLista.length; i++) {
+                if (interessesLista[i].checked) {
+                    interesses += interessesLista[i].value + " ";
+                }
+            }
+
+            // estado
+            var estado = document.getElementsByName("estado")[0].value;
+
+            // mensagem
+            var mensagem = document.getElementsByName("mensagem")[0].value;
+
+            // arquivo (só nome)
+            var arquivoInput = document.getElementsByName("arquivo")[0];
+            var arquivo = "";
+            if (arquivoInput.files.length > 0) {
+                arquivo = arquivoInput.files[0].name;
+            }
+
+            // montar CSV
+            var conteudo = "Nome,Email,Data,Genero,Interesses,Estado,Mensagem,Arquivo\n";
+            conteudo += nome + "," + email + "," + data + "," + genero + "," + interesses + "," + estado + "," + mensagem + "," + arquivo;
+
+            // criar arquivo
+            var blob = new Blob([conteudo], { type: "text/csv" });
+
+            var link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "dados.csv";
+
+            link.click();
+            });
+        </script>
+
+</body>
+</html>

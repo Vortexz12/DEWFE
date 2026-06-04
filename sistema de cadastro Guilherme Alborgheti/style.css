@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Formulário */
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Foco (quando clica) */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+/* Radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Hover suave */
+button:hover {
+    background: #3a78c2;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+}
+/* Remove borda do fieldset */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* Ajusta o título (legend) */
+legend {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+fieldset + fieldset {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+h3 {
+    display: none;
+}
